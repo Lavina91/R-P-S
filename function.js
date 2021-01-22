@@ -16,7 +16,7 @@ var userInput = window.prompt('Do you choose R, P, S ?');
   
 // checks user's input and repeats it back 
      if (!userInput) {
-         return;
+         return 'You chose ' + userInput + ' !';
      }
  
   //automatically puts the user input in upper case 
@@ -26,7 +26,34 @@ userInput = userInput.toUpperCase
 var getIndex = Math.floor(Math.random()* choices.length);
 var  compChoice = choices[getIndex]; 
 
-window.
+// creates an alert window to display computers choice 
+window.alert('Computer chose ' + compChoice + ' !')
+
+
+// if statement to check if it is a tie
+if(userInput === compChoice){
+    ties++
+    window.alert('Its a tie.')
+}
+
+// else if statement to check if user won
+else if (
+          (userInput === 'R' && compChoice ==='S') ||
+          (userInput === 'P' && compChoice === 'R') ||
+          (userInput === 'S' && compChoice === 'P')  
+                                                          ) {
+                     wins++;  
+                 window.alert("You've Won !")                                                    
+    }
+
+// else statement to see if computer won 
+else {
+        losses++
+        window.alert("You've Lost !")
+    }
+
+
+
 
 
 
