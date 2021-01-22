@@ -33,7 +33,7 @@ window.alert('Computer chose ' + compChoice + ' !')
 // if statement to check if it is a tie
 if(userInput === compChoice){
     ties++
-    window.alert('Its a tie.')
+    window.alert('Its a tie.');
 }
 
 // else if statement to check if user won
@@ -43,36 +43,30 @@ else if (
           (userInput === 'S' && compChoice === 'P')  
                                                           ) {
                      wins++;  
-                 window.alert("You've Won !")                                                    
+                 window.alert("You've Won !");                                                   
     }
 
 // else statement to see if computer won 
 else {
         losses++
-        window.alert("You've Lost !")
+        window.alert("You've Lost !");
     }
 
 
+// creates window to display stats
+window.alert(
+    'Stats:/nWins:' + wins + '/nLosses:' + losses + '/nTies:' + ties
+);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var playAnotherRound = window.confirm('Do you want to play another round ?')
+if(! playAnotherRound){
+    return;
+}
+else {
+    playGame();
+  }
 }
 
+playGame()
 
 
