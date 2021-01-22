@@ -22,6 +22,8 @@ var userInput = window.prompt('Do you choose R, P, S ?');
          ) {
          window.alert('You chose ' + userInput + ' !');
      }
+
+     // repeats prompt screen if user chose wrong answer 
      else {
          window.alert('Wrong Answer !')
          var userInput = window.prompt('Do you choose R, P, S ?');
